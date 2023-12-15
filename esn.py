@@ -188,7 +188,7 @@ class ReservoirCell(torch.nn.Module):
             else:
                 self.bias_scaling = bias_scaling
             # uniform init in [-1, +1] times bias_scaling
-            self.bias = (torch.rand(self.units) * 2 - 1) * self.bias_scaling
+            self.bias = (2 * torch.rand(self.units) - 1) * self.bias_scaling
             self.bias = nn.Parameter(self.bias, requires_grad=False)
         else:
             # zero bias
@@ -197,7 +197,7 @@ class ReservoirCell(torch.nn.Module):
 
         if alpha > 0:
             # random orthogonal matrix
-            Q, _ = torch.linalg.qr(torch.rand(units,units))
+            Q, _ = torch.linalg.qr(2*torch.rand(units,units)-1)
             self.ortho, self.beta = Q, torch.tensor([beta])
             self.ortho = nn.Parameter(self.ortho, requires_grad=False)
             self.beta = nn.Parameter(self.beta, requires_grad=False)
