@@ -67,6 +67,7 @@ lag = args.lag
 
 (train_dataset, train_target), (valid_dataset, valid_target), (test_dataset, test_target) = get_narma10(args.lag)
 
+
 NRMSE = np.zeros(args.test_trials)
 for guess in range(args.test_trials):
 
@@ -155,6 +156,7 @@ for guess in range(args.test_trials):
 
     if args.show_result:
         print(ar)
+
 
 mean = np.mean(NRMSE)
 std = np.std(NRMSE)
