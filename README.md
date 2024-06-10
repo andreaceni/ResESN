@@ -10,7 +10,7 @@ that you can find at this link https://www.sciencedirect.com/science/article/pii
 
 ![ResESN](/assets/ResESN.png "ResESN")
 
-## Example of usage on the Narma30 task
+## Examples of usage on the Narma30 task
 
 The following runs the Narma30 task for 100 different random instantiations of ResESN with 100 reservoir neurons
 ```
