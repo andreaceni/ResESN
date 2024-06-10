@@ -64,6 +64,18 @@ def get_lorenz(N, F, num_batch=128, lag=25, washout=200, window_size=0, seriesle
         return dataset
 
 
+def get_fixed_length_windows(tensor, length, prediction_lag=1):
+    assert len(tensor.shape) <= 2
+    if len(tensor.shape) == 1:
+        tensor = tensor.unsqueeze(-1)
+
+    windows = tensor[:-prediction_lag].unfold(0, length, 1)
+    windows = windows.permute(0, 2, 1)
+
+    targets = tensor[length+prediction_lag-1:]
+    return windows, targets  # input (B, L, I), target, (B, I)
+
+
 def get_mackey_glass(lag=1, washout=200, window_size=0):
     """
     Predict the next lag-th item of mackey-glass series
