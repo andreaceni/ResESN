@@ -10,7 +10,7 @@ that you can find at this link https://www.sciencedirect.com/science/article/pii
 
 ![ResESN](/assets/ResESN.png "ResESN")
 
-## Example of usage
+## Example of usage on the Narma30 task
 
 The following runs the Narma30 task for 100 different random instantiations of ResESN with 100 reservoir neurons
 ```
@@ -19,11 +19,11 @@ python narma30_task.py --n_hid 100 --test_trials 100 --use_test --bias_scaling 0
 
 To use the ResESN_C variant use the flag --ortho cycle as follows
 ```
-python narma30_task.py --n_hid 100 --test_trials 100  --use_test --ortho cycle --bias_scaling 0.5 --inp_scaling 0.25 --rho 0.8 --alpha 0.9 --beta 0.4 --show_result True --solver svd --avoid_rescal_effective --cpu
+python narma30_task.py --n_hid 100 --test_trials 100 --use_test --ortho cycle --bias_scaling 0.5 --inp_scaling 0.25 --rho 0.8 --alpha 0.9 --beta 0.4 --show_result True --solver svd --avoid_rescal_effective --cpu
 ```
 To use the ResESN_I variant use the flag --ortho identity as follows
 ```
-python narma30_task.py --n_hid 100 --test_trials 100  --use_test --ortho identity --bias_scaling 0.25 --inp_scaling 0.25 --rho 0.9 --leaky 1 --alpha 0.1 --beta 1 --show_result True --solver svd --avoid_rescal_effective --cpu
+python narma30_task.py --n_hid 100 --test_trials 100 --use_test --ortho identity --bias_scaling 0.25 --inp_scaling 0.25 --rho 0.9 --leaky 1 --alpha 0.1 --beta 1 --show_result True --solver svd --avoid_rescal_effective --cpu
 ```
 
 
