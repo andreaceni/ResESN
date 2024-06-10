@@ -146,7 +146,7 @@ for guess in range(args.test_trials):
         W = np.zeros((args.n_hid, args.n_hid))
         W[0, args.n_hid-1] = args.rho
         for i in range(args.n_hid-1):
-            W[i+1,i] = args.rho  # Tino used 0.5 but with input in [-0.5,0.5] 
+            W[i+1,i] = args.rho 
         model.reservoir[0].net.recurrent_kernel = torch.nn.Parameter(torch.Tensor(W).to(device), requires_grad=False)
 
 
