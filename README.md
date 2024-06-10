@@ -1,4 +1,4 @@
-# ResESN
+# Residual Echo State Network (ResESN)
 
 This repository provides the official implementations and experiments in the paper 
 ```
