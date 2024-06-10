@@ -8,7 +8,7 @@ Neurocomputing (2024): 127966.
 ```
 that you can find at this link https://www.sciencedirect.com/science/article/pii/S0925231224007379.
 
-![ResESN](/assets/ResESN architecture.pdf "ResESN")
+![ResESN](/assets/ResESN.pdf "ResESN")
 
 ## Citation
 ```
