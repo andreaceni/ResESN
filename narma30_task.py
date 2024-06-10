@@ -4,7 +4,7 @@ import argparse
 from esn import DeepReservoir
 from sklearn import preprocessing
 from sklearn.linear_model import Ridge
-from utils import get_narma30, coESN, check
+from utils import get_narma30
 
 
 parser = argparse.ArgumentParser(description='training parameters')
