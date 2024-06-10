@@ -23,7 +23,7 @@ python narma30_task.py --n_hid 100 --test_trials 100 --use_test --ortho cycle --
 ```
 To use the ResESN_I variant use the flag --ortho identity as follows
 ```
-python narma30_task.py --n_hid 100 --test_trials 100 --use_test --ortho identity --bias_scaling 0.25 --inp_scaling 0.25 --rho 0.9 --leaky 1 --alpha 0.1 --beta 1 --show_result True --solver svd --avoid_rescal_effective --cpu
+python narma30_task.py --n_hid 100 --test_trials 100 --use_test --ortho identity --bias_scaling 0.25 --inp_scaling 0.25 --rho 0.9 --alpha 0.1 --beta 1 --show_result True --solver svd --avoid_rescal_effective --cpu
 ```
 
 
