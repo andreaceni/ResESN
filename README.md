@@ -17,7 +17,7 @@ The following runs the Narma30 task for 100 different random instantiations of R
 python narma30_task.py --n_hid 100 --test_trials 100 --use_test --bias_scaling 0.25 --inp_scaling 0.25 --rho 0.9 --alpha 0.9 --beta 0.2 --show_result True --solver svd --avoid_rescal_effective --cpu
 ```
 
-To use the ResESN$_C$ variant use the flag --ortho cycle as follows
+To use the ResESN_C variant use the flag --ortho cycle as follows
 ```
 python narma30_task.py --n_hid 100 --test_trials 100 --use_test --ortho cycle --bias_scaling 0.5 --inp_scaling 0.25 --rho 0.8 --alpha 0.9 --beta 0.4 --show_result True --solver svd --avoid_rescal_effective --cpu
 ```
