@@ -169,7 +169,7 @@ for guess in range(tot_trials):
             W = np.zeros((args.n_hid, args.n_hid))
             W[0, args.n_hid-1] = args.rho
             for i in range(args.n_hid-1):
-                W[i+1,i] = args.rho  # Tino used 0.5 but with input in [-0.5,0.5] 
+                W[i+1,i] = args.rho 
             esn.W_res = W
     # ############################################################################### #
     
@@ -212,7 +212,6 @@ for guess in range(tot_trials):
         test_predicted, test_InternalStates = esn.predict(input_test, noise_closloop=False, continuation=True) # TEST 
         test_pred = test_predicted[:,0]
 
-        # original
         target_mean = np.mean(target_test)
         output_mean = np.mean(test_pred) 
         num  = 0
@@ -228,7 +227,7 @@ for guess in range(tot_trials):
         den = denom_t * denom_out
         MC_original[k] = num/den
 
-        str_MC = 'Delay: ' +str(k) + ',        MC_original: ' + str(MC_original[k]) + '\n'
+        str_MC = 'Delay k: ' +str(k) + ',        MC_k: ' + str(MC_original[k]) + '\n'
         if args.show_result:
             print(str_MC)
         f = open(f'{main_folder}/{namefile}.txt', 'a')
@@ -242,7 +241,7 @@ for guess in range(tot_trials):
     final_str_MC = ''
     for i in range(5):
         final_str_MC += '----------------------------------------------------------------------------------------------------\n'
-    final_str_MC += 'MEMORY CAPACITY.        Original: ' + str(mc_original) + '\n'
+    final_str_MC += 'MEMORY CAPACITY: ' + str(mc_original) + '\n'
     final_str_MC += 'Computational time: ' + str(fin-iniz) + 's\n'
     for i in range(6):
         final_str_MC += '|\n'
