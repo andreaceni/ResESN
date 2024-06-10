@@ -8,6 +8,8 @@ Neurocomputing (2024): 127966.
 ```
 that you can find at this link https://www.sciencedirect.com/science/article/pii/S0925231224007379.
 
+![HiPPO Framework](/assets/hippo.png "HiPPO Framework")
+
 ## Citation
 ```
 @article{ceni2024residual,
