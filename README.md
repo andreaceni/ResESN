@@ -26,7 +26,7 @@ To use the ResESN_I variant use the flag --ortho identity as follows
 python narma30_task.py --n_hid 100 --test_trials 100 --use_test --ortho identity --bias_scaling 0.25 --inp_scaling 0.25 --rho 0.9 --alpha 0.1 --beta 1 --show_result True --solver svd --avoid_rescal_effective --cpu
 ```
 
-In the file fff.sh you can find the best settings found for each ResESN variant for each experiment in the paper.
+In the file best_configurations_for_ResESN_variants.sh you can find the best settings found for each ResESN variant for each experiment in the paper.
 
 
 ## Citation
